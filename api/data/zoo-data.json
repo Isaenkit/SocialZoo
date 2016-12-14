@@ -34,7 +34,7 @@
   "message" : [{
     "username" : "julia",
     "content" : "belle réserve surtout quand on peut circuler en voiture dans le parc",
-    "createdOn" : ,
+    "createdOn" : "",
     "review" : [{
       "idcreator" : "yann",
       "idmessage" : "",
