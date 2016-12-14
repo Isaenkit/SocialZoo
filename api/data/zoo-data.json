@@ -120,13 +120,13 @@
     "description": "Le Parc Zoologique de Paris met l'animal au cœur de sa démarche en présentant les espèces dans des milieux évoquant leurs écosystèmes d'origine, respectant leur bien-être et vous permettant d'être immergé dans leurs milieux naturels.",
     "population": 1000,
     "superficy":"14,5 ha",
-    "species": ["Les oiseaux", "Les mammifères", "Les fauves", "Les reptiles", "Les primates"],
+    "species": ["Les oiseauxx", "Les mammifères", "Les fauves", "Les reptiles", "Les primates"],
     "photos": [
         "../../public/images/Paris1_Puma.jpg",
         "../../public/images/Paris2_Girafe.jpg",
         "../../public/images/Paris3_Singe.jpg"
     ],
-    "hours": "9h30 - 18hàà",
+    "hours": "9h30 - 18h00",
     "currency": "€",
     "price": 22,
     "messages": [{
@@ -140,5 +140,5 @@
         "commentedOn":
       }]
     }]
-} 
+}
 ]
