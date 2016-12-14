@@ -42,6 +42,7 @@
       "commentedOn":
       }]
     }]
+<<<<<<< HEAD
 },{
   "name" :"Zoo de la Flèche",
   "address" : "Le Tertre Rouge, 72200 La Flèche",
@@ -131,3 +132,33 @@
       }]
     }]
 }]
+=======
+}, {
+    "name": "Parc Zoologique de Paris",
+    "address": "Avenue Daumesnil, 75012 Paris",
+    "description": "Le Parc Zoologique de Paris met l'animal au cœur de sa démarche en présentant les espèces dans des milieux évoquant leurs écosystèmes d'origine, respectant leur bien-être et vous permettant d'être immergé dans leurs milieux naturels.",
+    "population": 1000,
+    "superficy":"14,5 ha",
+    "species": ["Les oiseauxx", "Les mammifères", "Les fauves", "Les reptiles", "Les primates"],
+    "photos": [
+        "../../public/images/Paris1_Puma.jpg",
+        "../../public/images/Paris2_Girafe.jpg",
+        "../../public/images/Paris3_Singe.jpg"
+    ],
+    "hours": "9h30 - 18h00",
+    "currency": "€",
+    "price": 22,
+    "messages": [{
+      "username":"Suzanne",
+      "content":"Je venais dans ce zoo dès ma plus tendre enfance. La nouveauté est magnifique.",
+      "createdOn":,
+      "review": [{
+        "idcreator":"Audrey",
+        "idmessage":"",
+        "content":"Nous y sommes allés en famille et tout le monde a été ravi.",
+        "commentedOn":
+      }]
+    }]
+}
+]
+>>>>>>> 348f95d9c006505f9303f8e227c5c05c5c887367
