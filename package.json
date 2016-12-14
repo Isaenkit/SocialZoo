@@ -1,0 +1,29 @@
+{
+  "name": "socialzoo",
+  "version": "1.0.0",
+  "description": "Reseau social pour zoo",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isaenkit/SocialZoo.git"
+  },
+  "keywords": [
+    "zoo",
+    "social"
+  ],
+  "author": "Isabelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isaenkit/SocialZoo/issues"
+  },
+  "homepage": "https://github.com/Isaenkit/SocialZoo#readme"
+}
