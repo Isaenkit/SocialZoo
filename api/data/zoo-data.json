@@ -1,144 +1,133 @@
 [{
-    "name": "",
-    "address": "",
-    "description": "",
-    "population": ,
-    "superficy":"",
-    "species": [],
-    "photos": [
-        "../../public/images"
-        "../../public/images"
-        "../../public/images"
-    ],
-    "hours": "",
-    "currency": "",
-    "messages": "",
-    "review": ""
-}, {
-    "name": "",
-    "address": "",
-    "description": "",
-    "population": ,
-    "superficy":"",
-    "species": [],
-    "photos": [
-        "../../public/images"
-        "../../public/images"
-        "../../public/images"
-    ],
-    "hours": "",
-    "currency": "",
-    "messages": "",
-    "review": ""
-}, {
-    "name": "",
-    "address": "",
-    "description": "",
-    "population": ,
-    "superficy":"",
-    "species": [],
-    "photos": [
-        "../../public/images"
-        "../../public/images"
-        "../../public/images"
-    ],
-    "hours": "",
-    "currency": "",
-    "messages": "",
-    "review": ""
-}, {
-    "name": "Zoo du Bois d'Attilly",
-    "address": "Route de Chevry, 77150 Férolles-Attilly
-",
-    "description": "La perception commune que ce monde  n'est durable que s’il est connu dans son étrange diversité  fruits de ses multiples stratégies pour   défier le destin et si nous humains dans cette rencontre avec la biodiversité nous acceptons que nous en sommes et que son combat pour le futur  est le nôtre, et qu' il est temps de ne plus  tout laisser "filer" au fils de l'eau c 'est a dire introduire du "politique" au sens grec du terme dans la marche du monde . À cette occasion, permettez-moi de rappeler ici les missions structurelles qui sont celles de tous les zoos :
-    Une contribution à la conservation des espèces animales sauvages en milieu naturel ou hébergées en captivité;
-    Le bienêtre des animaux hébergés en captivité ;
-    L’information du public sur la biodiversité et la faune sauvage ;
-    La prévention des risques écologiques.",
-    "population": 300,
-    "superficy":"25 ha",
-    "species": ["Les oiseaux", "Les primates", "Les fauves", "Les herbivores", "Les fauves"],
-    "photos": [
-        "../../public/images/Attilly1.jpg",
-        "../../public/images/Attilly2.jpg",
-        "../../public/images/Attilly3.jpg"
-    ],
-    "hours": "10h - 19h",
-    "currency": "€",
-    "price":16.50,
-    "messages": [{
-      "username":"Laurence",
-      "content":"Magnifique petit zoo. Les animaux sont adorables.",
-      "createdOn":,
-      "review": [{
-        "idcreator":"Paulo",
-        "idmessage":"",
-        "content":"Les animaux sont un peu tristes.",
-        "commentedOn":
+  "name" :"Zoo de Beauval",
+  "address" : "ZooParc de Beauval 41110 Saint Aignan sur Cher",
+  "description" : "Voilà plus de 35 ans, le petit parc ornithologique de Beauval voyait le jour au cœur du Loir-et-Cher. Au fil des ans, plaines verdoyantes, serres tropicales, bassins panoramiques et îles aménagées sont venus agrandir les lieux, toujours habités par des espèces aux origines variées. En allant au bout de son rêve, Françoise Delord a construit l'un des plus beaux parcs zoologiques du monde, abritant près de 8000 animaux dans des installations remarquables.",
+  "population" : 8000 ,
+  "superficy" : "32 ha",
+  "species" : ["les fauves","les primates","les herbivores","les oiseaux","les reptiles","les poissons","les mammifères aquatiques"],
+  "photos" :["../../public/image/koalabeauval.jpeg","../../public/images/pandabeauval.jpeg","../../public/images/tigrebeauval.jpg"] ,
+  "hours" : "9h - 20h",
+  "Price" : 29,
+  "currency" : "€",
+  "message" : [{
+    "username" : "robert",
+    "content" : "magnifique zoo",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "george",
+      "idmessage" : "",
+      "content":"En effet, vive les pandas",
+      "commentedOn":
       }]
     }]
-}, {
-    "name": "Bioparc",
-    "address": "Rue de Cholet - 49 700 Doué la Fontaine",
-    "description": "Notre vision est celle d’un monde où l’homme se réconcilie avec la nature… Notre mission :
-      • Susciter de l’émotion par l’immersion
-      Nous faisons appel à la richesse naturelle et culturelle du parc pour créer des ambiances évocatrices des milieux d’origine des animaux que nous accueillons.
-
-      • Présenter des espèces ambassadrices des milieux sauvages menacés
-      Guidés par notre expérience et nos rencontres, nous accueillons des animaux dont la présence au Bioparc témoigne des difficultés de survie de leurs cousins sauvages.
-
-      • S’investir dans leur pays d’origine
-      A travers le monde, en harmonie avec les populations humaines, nous accompagnons et soutenons des associations locales dédiées à la conservation d’espèces menacées ou de milieux naturels précieux.
-
-      • Faire du parc un espace d’échanges et de sensibilisation
-      Nous souhaitons transmettre les valeurs de partage et de respect acquises au travers de notre expérience avec la nature et les hommes.",
-    "population": 1000,
-    "superficy":"14 ha",
-    "species": ["Les oiseaux", "Les fauves", "Les reptiles", "Les mammifères", "Les primates"],
-    "photos": [
-        "../../public/images/Bioparc1.jpg",
-        "../../public/images/Bioparc2_Panda_Roux.jpg",
-        "../../public/images/Bioparc3_Zebre.jpg"
-    ],
-    "hours": "10h - 18h",
-    "price":21.00,
-    "currency": "€",
-    "messages": [{
-      "username":"Sébastien",
-      "content":"Très petit zoo. Les animaux sont un peu à l'étroit.",
-      "createdOn":,
-      "review": [{
-        "idcreator":"Zoé",
-        "idmessage":"",
-        "content":"Je confirme et mais les animaux semblent bien soignés.",
-        "commentedOn":
+},{
+  "name" :"Zoo Thoiry",
+  "address" : "Rue du Pavillon de Montreuil 78770 Thoiry",
+  "description" : "Après avoir pris le risque d'engager une partie de la fortune familiale dans son projet, le comte de La Panouse dut faire face à l'hostilité farouche de nombreux zoologistes, qui jugèrent l'entreprise insensée. Ouvert au public en 1968, le Parc Animalier de Thoiry révélait une ambition démesurée en s'adossant à un principe révolutionnaire. En effet, ce sont les visiteurs, enfermés dans leur voiture vitres closes, qui circulent au milieu des animaux en liberté. L'homme civilisé est en cage, prisonnier de sa boîte de métal, tandis que les animaux sauvages semblent déambuler librement.",
+  "population" : 3000 ,
+  "superficy" : "60 ha",
+  "species" : ["les fauves","les herbivores","les primates"],
+  "photos" :["../../public/image/elephantthoiry.jpg","../../public/images/girafethoiry.jpg","../../public/images/zebresthoiry.jpg"] ,
+  "hours" : "9h - 20h",
+  "Price" : 28,
+  "currency" : "€",
+  "message" : [{
+    "username" : "julia",
+    "content" : "belle réserve surtout quand on peut circuler en voiture dans le parc",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "yann",
+      "idmessage" : "",
+      "content":"oui mais c'était beaucoup mieux avant",
+      "commentedOn":
       }]
     }]
-}, {
-    "name": "Parc Zoologique de Paris",
-    "address": "Avenue Daumesnil, 75012 Paris",
-    "description": "Le Parc Zoologique de Paris met l'animal au cœur de sa démarche en présentant les espèces dans des milieux évoquant leurs écosystèmes d'origine, respectant leur bien-être et vous permettant d'être immergé dans leurs milieux naturels.",
-    "population": 1000,
-    "superficy":"14,5 ha",
-    "species": ["Les oiseaux", "Les mammifères", "Les fauves", "Les reptiles", "Les primates"],
-    "photos": [
-        "../../public/images/Paris1_Puma.jpg",
-        "../../public/images/Paris2_Girafe.jpg",
-        "../../public/images/Paris3_Singe.jpg"
-    ],
-    "hours": "9h30 - 18hàà",
-    "currency": "€",
-    "price": 22,
-    "messages": [{
-      "username":"Suzanne",
-      "content":"Je venais dans ce zoo dès ma plus tendre enfance. La nouveauté est magnifique.",
-      "createdOn":,
-      "review": [{
-        "idcreator":"Audrey",
-        "idmessage":"",
-        "content":"Nous y sommes allés en famille et tout le monde a été ravi.",
-        "commentedOn":
+},{
+  "name" :"Zoo de la Flèche",
+  "address" : "Le Tertre Rouge, 72200 La Flèche",
+  "description" : "Fondé en 1946, le Zoo de La Flèche fut le premier zoo privé à voir le jour en France. Près d’un siècle plus tard, il se distingue toujours et fait partie des 5 premiers parcs zoologiques français en nombre de visiteurs.",
+  "population" : 1200,
+  "superficy" : "14 ha",
+  "species" : ["les reptiles","les oiseaux","les mammifères"],
+  "photos" :["../../public/image/anacondafleche.jpg","../../public/images/saimiri.jpg"] ,
+  "hours" : "9h-20h",
+  "Price" :22,
+  "currency" : "€",
+  "message" : [{
+    "username" : "lisa",
+    "content" : "une grosse déception, le staff n'était pas aimable, je ne reviendrai plus ici",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "kévin",
+      "idmessage" : "",
+      "content":"thema les elephant était badass",
+      "commentedOn":
       }]
     }]
-} 
-]
+},{
+  "name" :"",
+  "address" : "",
+  "description" : "",
+  "population" : ,
+  "superficy" : "",
+  "species" : [""],
+  "photos" :["../../public/image/","../../public/images"] ,
+  "hours" : "",
+  "Price" :,
+  "currency" : "",
+  "message" : [{
+    "username" : "",
+    "content" : "",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "",
+      "idmessage" : "",
+      "content":"",
+      "commentedOn":
+      }]
+    }]
+},{
+  "name" :"",
+  "address" : "",
+  "description" : "",
+  "population" : ,
+  "superficy" : "",
+  "species" : [""],
+  "photos" :["../../public/image/","../../public/images"] ,
+  "hours" : "",
+  "Price" :,
+  "currency" : "",
+  "message" : [{
+    "username" : "",
+    "content" : "",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "",
+      "idmessage" : "",
+      "content":"",
+      "commentedOn":
+      }]
+    }]
+},{
+  "name" :"",
+  "address" : "",
+  "description" : "",
+  "population" : ,
+  "superficy" : "",
+  "species" : [""],
+  "photos" :["../../public/image/","../../public/images"] ,
+  "hours" : "",
+  "Price" :,
+  "currency" : "",
+  "message" : [{
+    "username" : "",
+    "content" : "",
+    "createdOn" : ,
+    "review" : [{
+      "idcreator" : "",
+      "idmessage" : "",
+      "content":"",
+      "commentedOn":
+      }]
+    }]
+}]
