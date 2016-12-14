@@ -1,7 +1,7 @@
-var mongoose = reqquire('mongoose');
-var url = 'mongodb://zoo:mongoDB@ds133358.mlab.com:33358/socialzoo';
+var mongoose = require('mongoose');
+var dburl = 'mongodb://zoo:mongoDB@ds133358.mlab.com:33358/socialzoo';
 var retry = null;
-mongoose.connect(url);
+mongoose.connect(dburl);
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
@@ -43,4 +43,4 @@ process.on('SIGTERM', function() {
 });
 
 // BRING IN YOUR SCHEMAS & MODELS
-require();
+require('./zoo.model');

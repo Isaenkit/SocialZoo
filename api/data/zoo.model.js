@@ -58,4 +58,4 @@ var zooSchema = new mongoose.Schema({
   messages : [messageSchema]
 });
 
-mongoose.model('Zoo', zooSchema);
+mongoose.model("zoo", zooSchema, "zoo");
