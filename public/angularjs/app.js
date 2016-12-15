@@ -5,7 +5,10 @@
   app.directive('header',function(){
     return{
       restrict : 'A',
-      templateUrl :'partials/common/header.html'
+      templateUrl :'partials/common/header.html',
+      link: function($scope, $element) {
+        $(".button-collapse").sideNav();
+      }
     }
   });
 
