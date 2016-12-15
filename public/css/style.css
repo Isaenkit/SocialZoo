@@ -45,3 +45,14 @@ hr.style1{
 img:hover{
   opacity: .5;
 }
+
+/* page 4 */
+.btn, .btn-large {
+    text-decoration: none;
+    color: #5d4037;
+    background-color: #F9A825;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
