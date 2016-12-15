@@ -13,9 +13,9 @@ module.exports.reviewGetOne = (req, res) => {
           .status(500)
           .json(err);
       } else if (!review){
-        console.log("MessageId not found in database", messageId);
+        console.log("MessageId not found in database", id);
         res
-          .status(400)
+          .status(404)
           .json(err);
       }
         res
