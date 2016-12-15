@@ -55,7 +55,7 @@ img:hover{
     letter-spacing: .5px;
     transition: .2s ease-out;
     cursor: pointer;
-
+}
 
 /* home */
 .accueil {
@@ -64,3 +64,15 @@ img:hover{
   border : 3px solid grey;
   padding-bottom:10px;
 }
+
+/*parallax*/
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
