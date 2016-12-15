@@ -55,4 +55,12 @@ img:hover{
     letter-spacing: .5px;
     transition: .2s ease-out;
     cursor: pointer;
+
+
+/* home */
+.accueil {
+  margin-left: auto;
+  width: 500px;
+  border : 3px solid grey;
+  padding-bottom:10px;
 }

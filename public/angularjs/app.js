@@ -5,7 +5,10 @@
   app.directive('header',function(){
     return{
       restrict : 'A',
-      templateUrl :'partials/common/header.html'
+      templateUrl :'partials/common/header.html',
+      link: function($scope, $element) {
+        $(".button-collapse").sideNav();
+      }
     }
   });
 
@@ -26,7 +29,7 @@
   app.config(['$routeProvider',function($routeProvider){
     $routeProvider
       .when('/',{
-        templateUrl:'partials/common/home.html'
+        templateUrl:'partials/home/home.html'
       })
       .when('/page2',{
         templateUrl:'partials/page2.html'
