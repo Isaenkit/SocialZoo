@@ -46,3 +46,4 @@ process.on('SIGTERM', function() {
 require('./zoo.model');
 require('./message.model');
 require('./review.model');
+require('./user.model');
