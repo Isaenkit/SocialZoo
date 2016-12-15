@@ -1,0 +1,16 @@
+img{
+  width: 250px;
+  padding : 9px;
+  margin: 10px;
+  border : 5px dotted green;
+}
+
+.row img {
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+img:hover{
+  opacity: .5;
+}
