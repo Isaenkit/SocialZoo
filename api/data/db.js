@@ -44,3 +44,5 @@ process.on('SIGTERM', function() {
 
 // BRING IN YOUR SCHEMAS & MODELS
 require('./zoo.model');
+require('./message.model');
+require('./review.model');

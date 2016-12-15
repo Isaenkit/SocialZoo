@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Message = mongoose.model('Message');
 
-module.exports.messageGetAll = function(req, res){
+module.exports.messageGetOne = (req, res) => {
   var id = req.params.zooId;
   console.log('GET message for zooId', id);
 
@@ -20,12 +20,13 @@ module.exports.messageGetAll = function(req, res){
     }
   });
 };
-module.exports.messageAddOne = function(req, res){
+module.exports.messageAddOne = (req, res) => {
   var id = req.params.zooId;
 
   console.log('POST message to zooId', Id);
 
   Message
+  .findById(id)
   .create({
     username : req.body.username,
     content : req.body.content
