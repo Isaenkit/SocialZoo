@@ -1,6 +1,12 @@
 nav ul a {
   color : #F9A825;
 },
-.logo {
-  margin-left: 20px;
+img.logo {
+    padding-top: 5px !;
+    padding-left: 10px !;
+},
+
+nav .brand-logo {
+    padding: 0 0 0 70px !;
+    white-space: nowrap;
 }
