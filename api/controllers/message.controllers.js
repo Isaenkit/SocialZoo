@@ -3,41 +3,50 @@ var Message = mongoose.model('Message');
 
 module.exports.messageGetOne = (req, res) => {
   var id = req.params.messageId;
-  console.log('GET message for zooId', id);
+
+  console.log('GET message for messageId', id);
 
   Message
   .findById(id)
   .exec(function(err, msg){
     if (err){
-      res.status(500).json(err);
-    }
-    else if (!msg){
-      console.log('Messages id not found in database', id);
+      console.log("Error finding message");
+      res
+          .status(500)
+          .json(err);
+    }else if (!message){
+      console.log('MessageId not found in database', id);
       res
           .status(404)
           .json({"Error": "Id not found"});
-    } else {
-      res
-          .json(msg.messages);
     }
+      res
+          .status(200)
+          .json(message);
   });
 };
+
 module.exports.messageAddOne = (req, res) => {
   var id = req.params.zooId;
 
-  console.log('POST message to zooId', Id);
+  console.log('POST message to zooId', id);
 
   Message
-  .findById(id)
   .create({
+    zooId: id,
     username : req.body.username,
     content : req.body.content
   }, function(err, message){
     if (err) {
       console.log("Error creating message");
       res
-        .status(201)
-        .json(message);
+        .status(400)
+        .json(err);
+      } else {
+        console.log("Message created", message);
+        res
+          .status(201)
+          .json(message)
     }
   });
 };
