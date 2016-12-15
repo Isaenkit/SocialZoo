@@ -31,6 +31,12 @@
       .when('/page2',{
         templateUrl:'partials/page2.html'
       })
+      .when('/page3',{
+        templateUrl:'partials/page3.html'
+      })
+      .when('/page4',{
+        templateUrl:'partials/page4.html'
+      })
   }]);
 
 })();
