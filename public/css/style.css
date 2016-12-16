@@ -68,7 +68,7 @@ img:hover{
 /*parallax*/
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 400px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -76,3 +76,6 @@ img:hover{
   .parallax-container .section {
     width: 100%;
   }
+.materialboxed{
+  width: 150px;
+}

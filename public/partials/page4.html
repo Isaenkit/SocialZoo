@@ -1,12 +1,12 @@
 <div class="row">
-    <form class="col s12">
+    <form name="form" class="col s12" ng-submit="form.$valid && formulaire.contact()">
       <div class="row">
         <div class="input-field col s4">
-          <input id="name" type="text" class="validate">
+          <input id="name" type="text" class="validate" ng-model="name" required>
           <label for="name">Nom du zoo :</label>
         </div>
         <div class="input-field col s5">
-          <input id="address" type="text" class="validate">
+          <input id="address" type="text" class="validate" ng-model="address" required>
           <label for="address">Adresse complète :</label>
         </div>
         <div class="input-field col s3">
@@ -16,27 +16,27 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="description" type="text" class="validate">
+          <input id="description" type="text" class="validate" ng-model="description" required>
           <label for="description">Quelques mots de description :</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="population" type="text" class="validate">
+          <input id="population" type="text" class="validate" ng-model="population" required>
           <label for="population">Nombre d'animaux :</label>
         </div>
         <div class="input-field col s6">
-          <input id="superficy" type="text" class="validate">
+          <input id="superficy" type="text" class="validate" ng-model="superficy" required>
           <label for="superficy">Superficie :</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="species" type="text" class="validate">
+          <input id="species" type="text" class="validate" ng-model="species" required>
           <label for="species">Espèces :</label>
         </div>
         <div class="input-field col s6">
-          <input id="hours" type="text" class="validate">
+          <input id="hours" type="text" class="validate" ng-model="hours" required>
           <label for="hours">Horaires d'ouverture :</label>
         </div>
       </div>
@@ -44,7 +44,7 @@
         <div class="input-field col s8">
         </div>
         <div class="input-field col s4">
-          <input id="price" type="text" class="validate">
+          <input id="price" type="text" class="validate" ng-model="price" required>
           <label for="price">Prix de l'entrée :</label>
         </div>
       </div>
