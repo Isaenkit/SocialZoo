@@ -18,7 +18,7 @@
     $scope.profile = {};
     zooService.getOnePost(zooId).then(function(response){
       $scope.profile = response.data;
-      console.log($scope.profile)
+      console.log($scope.profile);
     });
   });
 
@@ -41,6 +41,71 @@
 
   });
 
+  // controller de post //
+  app.controller('testController', function(appService, $scope) {
+          var _this = this;
+          $scope.posts = [];
+          $scope.master = [];
+          // $scope.test = function(postID) {
+          //   console.log('aaa', postID);
+          //   return "<h1>a</h1>";
+          // }
+          this.commentsFetch = function(arrayPosts) {
+
+            console.log("commentsFetch() :", arrayPosts)
+            for(var i=0;i<arrayPosts.length;i++) {
+              let postID = arrayPosts[i]._id;
+              console.log('IDpost', postID);
+              $scope.master = [];
+              appService.getAllComment(postID).then(function(data) {
+                let commentsForThisPost = data.data;
+                console.log(commentsForThisPost);
+
+                let key = postID;
+                let obj = {};
+                obj[key] = commentsForThisPost;
+
+                $scope.master.push(commentsForThisPost);
+                console.log('là', $scope.master)
+              });
+            }
+            console.log('ici',$scope.master)
+          }
+
+          // Methode pour ajouter un commentaire
+          this.addComment = function(form, postID) {
+            let commentaire = form.commentaire;
+            if(commentaire.length > 0) {
+              console.log(commentaire);
+              appService.addComment(postID, commentaire).then(function() {
+                appService.getAllPosts().then(function(data) {
+                  $scope.posts = data.data;
+                  // console.log($scope.posts);
+                  _this.commentsFetch(data.data);
+                });
+              });
+            }
+          };
+
+          // Méthode d'ajout de post
+        this.addPost = function(form) {
+          var titre = form.titre;
+          var texte = form.texte;
+          if(titre.length > 0 && texte.length > 0) {
+            var post = {
+              titre: titre,
+              texte: texte
+            }
+            appService.addPost(post).then(function(data) {
+              appService.getAllPosts().then(function(data) {
+                $scope.posts = data.data;
+                // console.log($scope.posts);
+                _this.commentsFetch(data.data);
+              });
+            });
+          }
+        }
+    });
 
   app.directive('header',function(){
     return{
@@ -90,7 +155,9 @@
     return {
       getAllPosts: getAllPosts,
       getOnePost: getOnePost,
-      postAddOne: postAddOne
+      postAddOne: postAddOne,
+      addPost: addPost,
+      addComment: addComment
 
     };
 
@@ -106,6 +173,18 @@
     function complete(response) {
       return response;
     }
+    function addPost(post) {
+      return $http.post('/api/message/', {
+            post: post
+          }).then(complete).catch(failed);
+        }
+    function addComment(postID, commentaire) {
+      return $http.post('/api/message', {
+                postID: postID,
+                comment: commentaire
+              }).then(complete).catch(failed);
+            }
+
     function failed(error) {
       console.log(error.statusText);
     }

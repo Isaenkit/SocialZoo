@@ -59,13 +59,36 @@
 
   </div>
 </div>
-<div class="row center"
-<form class="commentaire" action="index.html" method="post">
-  <label for=""><input type="text" name="name" placeholder="votre commentaire" value=""/></label>
-    <input type="submit"/>
-</form>
-</div>
 
+  <!-- section commentaire -->
+<div ng-controller="testController as store">
+    <form ng-submit="store.addPost(this)">
+      Titre post : <input type="text" name="titre" ng-model="titre"/>
+      Texte post : <textarea name="texte" ng-model="texte"></textarea>
+      <input type="submit" />
+    </form>
+    <hr/>
+    Nb post pour ce zoo : {{posts.length}}
+    <ul>
+      <li ng-repeat="post in posts">
+        <div style="background:#ddd;margin:5px;">
+        Titre : {{post.titre}}, Texte : {{post.texte}} <a href="#" ng-click="store.deletePost(post._id)">Supprimer ({{post._id}})</a>
+        <hr/>
+        Nb comment pour ce post : {{master[$index].length}}
+        <hr/>
+        Create comment :
+        <form ng-submit="store.addComment(this, post._id)">
+          <input type="text" placeholder="Votre commentaire" ng-model="commentaire"/>
+          <input type="submit" value="Envoyer"/>
+
+          <ul>
+            <li ng-repeat="com in master[$index]">{{com.comment}}</li>
+          </ul>
+        </form>
+        </div>
+      </li>
+    </ul>
+</div>
 <script>
 $(document).ready(function() {
 
