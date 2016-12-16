@@ -1,98 +1,116 @@
 <div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-      <h1 class="header center teal-text  yellow-text text-darken-3">{{profile.name}}</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Venez observer la vie des animaux comme vous ne l'avez jamais vu.</h5>
-      </div>
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text  yellow-text text-darken-3">{{profile.name}}</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Venez observer la vie des animaux comme vous ne l'avez jamais vu.</h5>
+            </div>
 
-      <br><br>
+            <br><br>
 
+        </div>
     </div>
-  </div>
-  <div class="parallax"><img src="images/Paris1_Puma.jpg" alt="Unsplashed background img 1"></div>
-</div>
-
- <div class="container portfolio">
-<div class="row">
- <div class="col s4 portfolio-holder"><img class="materialboxed" ng-repeat="picture in profile.photos" src="images/{{picture}}"/></div>
-</div>
+    <div class="parallax"><img src="images/Paris1_Puma.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
 <div class="container">
-  <div class="section">
+    <div class="section">
+        <!--   Icon Section   -->
+        <div class="row center">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center yellow-text text-darken-3">
+                        <i class="material-icons">info_outline</i>
+                    </h2>
+                    <h5 class="center">About us</h5>
 
-    <!--   Icon Section   -->
-    <div class="row center">
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center yellow-text text-darken-3"><i class="material-icons">info_outline</i></h2>
-          <h5 class="center">About us</h5>
+                    <p class="light ">{{profile.description}}</p>
+                    <p class="light">Épeces:
+                        {{profile.population}}
+                        animaux</p>
+                    <div ng-repeat="especes in profile.species" class="light">{{especes}}</div>
+                    <p class="light">Superficie:
+                        {{profile.superficy}}</p>
+                </div>
+            </div>
 
-          <p class="light ">{{profile.description}}</p>
-          <p  class="light">Épeces: {{profile.population}} animaux</p>
-          <div ng-repeat="especes in profile.species" class="light">{{especes}}</div>
-          <p class="light">Superficie: {{profile.superficy}}</p>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center yellow-text text-darken-3">
+                        <i class="material-icons">group</i>
+                    </h2>
+                    <h5 class="center">Infos pratique</h5>
+
+                    <p class="light">Horaires d'ouverture:
+                        {{profile.hours}}</p>
+                    <p class="light">Prix de l'entrée:
+                        {{profile.Price}}{{profile.currency}}
+                        <p></div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center yellow-text text-darken-3">
+                                <i class="material-icons">room</i>
+                            </h2>
+                            <h5 class="center">Où nous trouver</h5>
+
+                            <p class="light">{{profile.address}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center yellow-text text-darken-3"><i class="material-icons">group</i></h2>
-          <h5 class="center">Infos pratique</h5>
-
-          <p class="light">Horaires d'ouverture: {{profile.hours}}</p>
-          <p class="light">Prix de l'entrée: {{profile.Price}}{{profile.currency}}<p>
+        <div class="container portfolio">
+            <div class="row">
+                <div class="col s4 m6 l12 portfolio-holder"><img class="materialboxed" ng-repeat="picture in profile.photos" src="images/{{picture}}"/></div>
+            </div>
         </div>
-      </div>
 
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center yellow-text text-darken-3"><i class="material-icons">room</i></h2>
-          <h5 class="center">Où nous trouver</h5>
+        <!-- section commentaire -->
+        <div class="messsage">
+        <div ng-controller="testController as store">
+            <form ng-submit="store.addPost(this)">
+                Titre post :
+                <input type="text" name="titre" ng-model="titre"/>
+                Texte post :
+                <textarea name="texte" ng-model="texte"></textarea>
+                <input type="submit"/>
+            </form>
+            <hr/>
+            Nb post pour ce zoo :
+            {{posts.length}}
+            <ul>
+                <li ng-repeat="post in posts">
+                    <div style="background:#ddd;margin:5px;">
+                        Titre :
+                        {{post.username}}, Texte :
+                        {{post.content}}
+                        <a href="#" ng-click="store.deletePost(post._id)">Supprimer ({{post._id}})</a>
+                        <hr/>
+                        Nb comment pour ce post :
+                        {{comments[post._id].length}}
+                        <hr/>
+                        Create comment :
+                        <form ng-submit="store.addComment(this, post._id)">
+                            <input type="text" placeholder="Votre commentaire" ng-model="commentaire"/>
+                            <input type="submit" value="Envoyer"/>
 
-          <p class="light">{{profile.address}}</p>
+                            <ul>
+                                <li ng-repeat="com in comments[post._id]">{{com.content}}</li>
+                            </ul>
+                        </form>
+                    </div>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
+          </div>
+        <script>
+            $(document).ready(function() {
 
-  </div>
-</div>
+                $('.parallax').parallax();
 
-  <!-- section commentaire -->
-<div ng-controller="testController as store">
-    <form ng-submit="store.addPost(this)">
-      Titre post : <input type="text" name="titre" ng-model="titre"/>
-      Texte post : <textarea name="texte" ng-model="texte"></textarea>
-      <input type="submit" />
-    </form>
-    <hr/>
-    Nb post pour ce zoo : {{posts.length}}
-    <ul>
-      <li ng-repeat="post in posts">
-        <div style="background:#ddd;margin:5px;">
-        Titre : {{post.username}}, Texte : {{post.content}} <a href="#" ng-click="store.deletePost(post._id)">Supprimer ({{post._id}})</a>
-        <hr/>
-        Nb comment pour ce post : {{comments[post._id].length}}
-        <hr/>
-        Create comment :
-        <form ng-submit="store.addComment(this, post._id)">
-          <input type="text" placeholder="Votre commentaire" ng-model="commentaire"/>
-          <input type="submit" value="Envoyer"/>
-
-          <ul>
-            <li ng-repeat="com in comments[post._id]">{{com.content}}</li>
-          </ul>
-        </form>
-        </div>
-      </li>
-    </ul>
-</div>
-<script>
-$(document).ready(function() {
-
-    $('.parallax').parallax();
-
-});
-</script>
+            });
+        </script>
