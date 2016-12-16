@@ -72,9 +72,9 @@
     <ul>
       <li ng-repeat="post in posts">
         <div style="background:#ddd;margin:5px;">
-        Titre : {{post.titre}}, Texte : {{post.texte}} <a href="#" ng-click="store.deletePost(post._id)">Supprimer ({{post._id}})</a>
+        Titre : {{post.username}}, Texte : {{post.content}} <a href="#" ng-click="store.deletePost(post._id)">Supprimer ({{post._id}})</a>
         <hr/>
-        Nb comment pour ce post : {{master[$index].length}}
+        Nb comment pour ce post : {{comments[post._id].length}}
         <hr/>
         Create comment :
         <form ng-submit="store.addComment(this, post._id)">
@@ -82,7 +82,7 @@
           <input type="submit" value="Envoyer"/>
 
           <ul>
-            <li ng-repeat="com in master[$index]">{{com.comment}}</li>
+            <li ng-repeat="com in comments[post._id]">{{com.content}}</li>
           </ul>
         </form>
         </div>

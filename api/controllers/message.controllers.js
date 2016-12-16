@@ -14,7 +14,7 @@ module.exports.messageGetOne = (req, res) => {
       res
           .status(500)
           .json(err);
-    }else if (!message){
+    }else if (!msg){
       console.log('MessageId not found in database', id);
       res
           .status(404)
@@ -22,7 +22,32 @@ module.exports.messageGetOne = (req, res) => {
     }
       res
           .status(200)
-          .json(message);
+          .json(msg);
+  });
+};
+
+module.exports.messageGetAllByZooId= (req, res) => {
+  var id = req.params.zooId;
+
+  console.log('GET message for zooId', id);
+
+  Message
+  .find({"zooId" : id})
+  .exec(function(err, msg){
+    if (err){
+      console.log("Error finding message");
+      res
+          .status(500)
+          .json(err);
+    }else if (!msg){
+      console.log('MessageId not found in database', id);
+      res
+          .status(404)
+          .json({"Error": "Id not found"});
+    }
+      res
+          .status(200)
+          .json(msg);
   });
 };
 
@@ -56,7 +81,7 @@ module.exports.putMessage = (req, res) => {
 
   Message
   .findById(messageId)
-  .exec(function(err, user){
+  .exec(function(err, message){
     if(err){
       console.log("Error finding message");
       res

@@ -5,10 +5,6 @@ var reviewSchema = new mongoose.Schema({
     type : String,
     required : true
   },
-  idcreator : {
-    type : String,
-    required : true
-  },
   idmessage : {
     type : String,
     required : true

@@ -24,17 +24,41 @@ module.exports.reviewGetOne = (req, res) => {
     });
 };
 
+module.exports.reviewGetAll = (req, res) => {
+  var id = req.params.messageId;
+
+  Review
+    .find({"idmessage" : id})
+    .exec(function(err, review){
+      if (err){
+        console.log("Error finding review");
+        res
+          .status(500)
+          .json(err);
+      } else if (!review){
+        console.log("MessageId not found in database", id);
+        res
+          .status(404)
+          .json(err);
+      }
+        res
+          .status(200)
+          .json(review);
+    });
+};
+
 module.exports.reviewAddOne = (req, res) => {
   console.log("Add new review");
 
   Review
     .create({
+      zooId : req.body.zooId,
       idmessage : req.body.idmessage,
       content : req.body.content,
 
     }, function(err, review){
       if (err) {
-        console.log("Error creating review");
+        console.log(err);
         res
             .status(400)
             .json(err);
@@ -66,7 +90,7 @@ module.exports.deleteReview = (req, res) => {
     });
 };
 
-module.exports.putReview : (req, res) => {
+module.exports.putReview = (req, res) => {
   var reviewId = req.params.reviewId;
 
   Review
@@ -88,7 +112,7 @@ module.exports.putReview : (req, res) => {
       console.log(Date.now());
 
       review.idmessage = req.body.idmessage,
-      review.content : req.body.content,
+      review.content = req.body.content,
 
     review
       .save(function(err, reviewUpdated){
@@ -99,3 +123,4 @@ module.exports.putReview : (req, res) => {
         }
       });
     });
+}
