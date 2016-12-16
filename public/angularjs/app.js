@@ -77,8 +77,8 @@
             let commentaire = form.commentaire;
             if(commentaire.length > 0) {
               console.log(commentaire);
-              appService.addComment(postID, commentaire).then(function() {
-                appService.getAllPosts().then(function(data) {
+              zooService.addComment(postID, commentaire).then(function() {
+                zooService.getAllPosts().then(function(data) {
                   $scope.posts = data.data;
                   // console.log($scope.posts);
                   _this.commentsFetch(data.data);
