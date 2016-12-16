@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col s12 m4 l4" ng-repeat="zoo in zoos">
-    <div class="card large">
-      <div class="card-image">
-        <img src="images/{{zoo.photos[0]}}">
-        <span class="card-title">{{zoo.name}}</span>
-      </div>
-      <div class="card-content">
-        <p>{{zoo.description}}</p>
-      </div>
-      <div class="card-action">
-        <a href="#/page3/{{zoo._id}}">Voir le profil du zoo</a>
-      </div>
+    <div class="col s12 m4 l4" ng-repeat="zoo in zoos">
+        <div class="card large">
+            <div class="card-image">
+                <img src="images/{{zoo.photos[0]}}">
+                <span class="card-title">{{zoo.name}}</span>
+            </div>
+            <div class="card-content">
+                <p>{{zoo.description}}</p>
+            </div>
+            <div class="card-action">
+                <a href="#/page3/{{zoo._id}}">Voir le profil du zoo</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -7,43 +7,43 @@ var ctrlUser = require('../controllers/user.controllers.js');
 var ctrlReview = require('../controllers/review.controllers.js');
 //Message routes
 router
-.route('/message/:zooId')
-.post(ctrlMessage.messageAddOne)
-.get(ctrlMessage.messageGetAllByZooId);
+    .route('/message/:zooId')
+    .post(ctrlMessage.messageAddOne)
+    .get(ctrlMessage.messageGetAllByZooId);
 
 router
-  .route('/message/:messageId/comment')
-  .post(ctrlReview.reviewAddOne)
-  .get(ctrlReview.reviewGetAll);
+    .route('/message/:messageId/comment')
+    .post(ctrlReview.reviewAddOne)
+    .get(ctrlReview.reviewGetAll);
 
 router
-.route('/message/:messageId')
-.get(ctrlMessage.messageGetOne)
-.delete(ctrlMessage.deleteMessage)
-.put(ctrlMessage.putMessage);
+    .route('/message/:messageId')
+    .get(ctrlMessage.messageGetOne)
+    .delete(ctrlMessage.deleteMessage)
+    .put(ctrlMessage.putMessage);
 
 // zoo routes
 router
-.route('/zoo')
-.get(ctrlZoo.zooGetAll)
-.post(ctrlZoo.zooAddOne);
+    .route('/zoo')
+    .get(ctrlZoo.zooGetAll)
+    .post(ctrlZoo.zooAddOne);
 
 router
-.route('/zoo/:zooId')
-.get(ctrlZoo.zooGetOne)
-.delete(ctrlZoo.deleteZoo)
-.put(ctrlZoo.putZoo);
+    .route('/zoo/:zooId')
+    .get(ctrlZoo.zooGetOne)
+    .delete(ctrlZoo.deleteZoo)
+    .put(ctrlZoo.putZoo);
 
 // user routes
 
 router
-.route('/user')
-.post(ctrlUser.userAddOne);
+    .route('/user')
+    .post(ctrlUser.userAddOne);
 
 router
-.route('/user/:userId')
-.get(ctrlUser.userGetOne)
-.put(ctrlUser.putUser)
-.delete(ctrlUser.deleteUser);
+    .route('/user/:userId')
+    .get(ctrlUser.userGetOne)
+    .put(ctrlUser.putUser)
+    .delete(ctrlUser.deleteUser);
 
 module.exports = router;

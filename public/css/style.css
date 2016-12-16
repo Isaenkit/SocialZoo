@@ -2,6 +2,7 @@ body {
     font-family: 'Fjalla One', sans-serif;
 }
 
+
 /* header */
 
 nav ul a {
@@ -37,6 +38,10 @@ nav .brand-logo {
 
 /* footer */
 
+.foot {
+    padding-top: 15px;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -55,6 +60,10 @@ body {
 
 hr.style1 {
     border-top: 1px solid #8c8b8b;
+}
+
+.association {
+    padding: 0 30px 0 30px;
 }
 
 
@@ -147,5 +156,5 @@ form {
 }
 
 .portfolio-holder {
-    margin:auto;
+    margin: auto;
 }

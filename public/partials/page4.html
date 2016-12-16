@@ -1,76 +1,80 @@
 <div class="row">
     <form name="form" class="col s12" ng-submit="form.$valid && formulaire.contact()">
-      <div class="row">
-        <div class="input-field col s4">
-          <input id="name" type="text" class="validate" ng-model="name" required>
-          <label for="name">Nom du zoo :</label>
+        <div class="row">
+            <div class="input-field col s4">
+                <input id="name" type="text" class="validate" ng-model="name" required>
+                <label for="name">Nom du zoo :</label>
+            </div>
+            <div class="input-field col s5">
+                <input id="address" type="text" class="validate" ng-model="address" required>
+                <label for="address">Adresse complète :</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+            </div>
         </div>
-        <div class="input-field col s5">
-          <input id="address" type="text" class="validate" ng-model="address" required>
-          <label for="address">Adresse complète :</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="description" type="text" class="validate" ng-model="description" required>
+                <label for="description">Quelques mots de description :</label>
+            </div>
         </div>
-        <div class="input-field col s3">
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="wrong" data-success="right">Email</label>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="population" type="text" class="validate" ng-model="population" required>
+                <label for="population">Nombre d'animaux :</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="superficy" type="text" class="validate" ng-model="superficy" required>
+                <label for="superficy">Superficie :</label>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="description" type="text" class="validate" ng-model="description" required>
-          <label for="description">Quelques mots de description :</label>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="species" type="text" class="validate" ng-model="species" required>
+                <label for="species">Espèces :</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="hours" type="text" class="validate" ng-model="hours" required>
+                <label for="hours">Horaires d'ouverture :</label>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="population" type="text" class="validate" ng-model="population" required>
-          <label for="population">Nombre d'animaux :</label>
+        <div class="row">
+            <div class="input-field col s8"></div>
+            <div class="input-field col s4">
+                <input id="price" type="text" class="validate" ng-model="price" required>
+                <label for="price">Prix de l'entrée :</label>
+            </div>
         </div>
-        <div class="input-field col s6">
-          <input id="superficy" type="text" class="validate" ng-model="superficy" required>
-          <label for="superficy">Superficie :</label>
+        <div class="row">
+            <div class="form-group col s4">
+                <label for="exampleInputFile">Choisir une image</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Ex. lion.jpg</p>
+                <a class="waves-effect waves-teal btn-flat">Télécharger</a>
+            </div>
+            <div class="form-group col s4">
+                <label for="exampleInputFile">Choisir une image</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Ex. lion.jpg.</p>
+                <a class="waves-effect waves-teal btn-flat">Télécharger</a>
+            </div>
+            <div class="form-group col s4">
+                <label for="exampleInputFile">Choisir une image</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Ex. lion.jpg</p>
+                <a class="waves-effect waves-teal btn-flat">Télécharger</a>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="species" type="text" class="validate" ng-model="species" required>
-          <label for="species">Espèces :</label>
+        <div class="row">
+            <center>
+                <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Soumettre
+                    <i class="material-icons right">send</i>
+                </button>
+            </center>
         </div>
-        <div class="input-field col s6">
-          <input id="hours" type="text" class="validate" ng-model="hours" required>
-          <label for="hours">Horaires d'ouverture :</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s8">
-        </div>
-        <div class="input-field col s4">
-          <input id="price" type="text" class="validate" ng-model="price" required>
-          <label for="price">Prix de l'entrée :</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group col s4">
-          <label for="exampleInputFile">Choisir une image</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Ex. lion.jpg</p>
-          <a class="waves-effect waves-teal btn-flat">Télécharger</a>        </div>
-        <div class="form-group col s4">
-          <label for="exampleInputFile">Choisir une image</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Ex. lion.jpg.</p>
-          <a class="waves-effect waves-teal btn-flat">Télécharger</a>
-        </div>
-        <div class="form-group col s4">
-          <label for="exampleInputFile">Choisir une image</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Ex. lion.jpg</p>
-          <a class="waves-effect waves-teal btn-flat">Télécharger</a>        </div>
-      </div>
-      <div class="row">
-        <center><button class="btn waves-effect waves-light btn-large" type="submit" name="action">Soumettre
-    <i class="material-icons right">send</i></button></center>
-      </div>
-        </div>
-      </div>
-    </form>
-  </div>
+    </div>
+</div>
+</form>
+</div>

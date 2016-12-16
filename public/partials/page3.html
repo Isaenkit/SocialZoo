@@ -65,14 +65,15 @@
         </div>
         <div class="container portfolio">
             <div class="row">
-              <h5 class="light-green-text text-darken-4">Galerie</h5>
-              </div>
-                <div class="col s4 m6 l12 portfolio-holder"><img class="materialboxed" ng-repeat="picture in profile.photos" src="images/{{picture}}"/></div>
+                <h5 class="light-green-text text-darken-4">Galerie</h5>
             </div>
+            <div class="col s4 m6 l12 portfolio-holder"><img class="materialboxed" ng-repeat="picture in profile.photos" src="images/{{picture}}"/></div>
         </div>
+    </div>
 
-        <!-- section commentaire -->
-        <div class="messsage">
+    <!-- section commentaire -->
+    <div class="container col s4 m6 l12">
+        <h5 class="light-green-text text-darken-4">Commentaires</h5>
         <div ng-controller="testController as store">
             <form ng-submit="store.addPost(this)">
                 Titre post :
@@ -108,11 +109,11 @@
                 </li>
             </ul>
         </div>
-          </div>
-        <script>
-            $(document).ready(function() {
+    </div>
+    <script>
+        $(document).ready(function() {
 
-                $('.parallax').parallax();
+            $('.parallax').parallax();
 
-            });
-        </script>
+        });
+    </script>
