@@ -1,81 +1,16 @@
 <div class="row">
-        <div class="col s12 m4 l4">
-          <div class="card large">
-            <div class="card-image">
-              <img src="../images/pandabeauval.jpeg">
-              <span class="card-title">Zoo de Beauval</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
-
-              <div class="col s12 m4 l4">
-                <div class="card large">
-                  <div class="card-image">
-                    <img src="../images/anacondafleche.jpg">
-                    <span class="card-title">Zoo de la Flèche</span>
-                  </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col s12 m4 l4">
-                <div class="card large">
-                  <div class="card-image">
-                    <img src="../images/Attilly1.jpg">
-                    <span class="card-title">Zoo du bois d'Attilly</span>
-                  </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-                    <div class="col s12 m4 l4">
-                      <div class="card large">
-                        <div class="card-image">
-                          <img src="../images/Bioparc2_Panda_Roux.jpg">
-                          <span class="card-title">Bioparc de Doué la Fontaine</span>
-                        </div>
-                        <div class="card-content">
-                          <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                          <div class="col s12 m4 l4">
-                            <div class="card large">
-                              <div class="card-image">
-                                <img src="../images/girafethoiry.jpg">
-                                <span class="card-title">Parc zoologique de Thoiry</span>
-                              </div>
-                              <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col s12 m4 l4">
-                            <div class="card large">
-                              <div class="card-image">
-                                <img src="../images/saimirifleche.jpg">
-                                <span class="card-title">Zoo de la Flèche</span>
-                              </div>
-                              <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+  <div class="col s12 m4 l4" ng-repeat="zoo in zoos">
+    <div class="card large">
+      <div class="card-image">
+        <img src="images/{{zoo.photos[0]}}">
+        <span class="card-title">{{zoo.name}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{zoo.description}}</p>
+      </div>
+      <div class="card-action">
+        <a href="#/page3/{{zoo._id}}">Voir le profil du zoo</a>
+      </div>
+    </div>
+  </div>
+</div>
