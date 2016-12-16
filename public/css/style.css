@@ -1,3 +1,8 @@
+body {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
 /* header */
 nav ul a {
   color : #F9A825;
@@ -49,7 +54,7 @@ hr.style1{
   border-top: 1px solid #8c8b8b;
 }
 
-/* page 2 */
+/* Page2 Galerie Zoo */
 .animal{
   width: 250px;
   padding : 9px;
@@ -67,7 +72,7 @@ img:hover{
   opacity: .5;
 }
 
-/* page 4 */
+/* page 4 Formulaire enregistrement zoo */
 .btn, .btn-large {
     text-decoration: none;
     color: #5d4037;
@@ -85,14 +90,20 @@ img:hover{
   border : 3px solid grey;
   padding-bottom:10px;
 }
-img .home  {
+img.home  {
     border: 0;
     padding-top: 5px;
     margin-top: 15px;
     margin-left: 15px;
 }
 
-/*parallax*/
+form {
+  padding-top: 60px;
+}
+
+
+
+/* Page 3 parallax*/
 
 .parallax-container {
   min-height: 400px;
