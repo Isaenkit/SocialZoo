@@ -1,10 +1,31 @@
 /* header */
 nav ul a {
   color : #F9A825;
-},
+}
 
-nav.brand-logo {
-    margin: 0 0 0 70px;
+.logo {
+  position: relative;;
+  margin-top:5px!important;
+  margin-left: 10px!important;
+}
+
+nav .brand-logo {
+    position: absolute;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0 10px 0 50px;
+    white-space: nowrap;
+}
+
+.side-nav a {
+    color:#F9A825!important;
+    width:200px!important;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
 }
 
 /* footer */
@@ -12,11 +33,11 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
+},
 
 main {
   flex: 1 0 auto;
-}
+},
 
 .association {
   width: 50px;
