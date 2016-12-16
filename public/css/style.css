@@ -85,6 +85,12 @@ img:hover{
   border : 3px solid grey;
   padding-bottom:10px;
 }
+img .home  {
+    border: 0;
+    padding-top: 5px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
 
 /*parallax*/
 
